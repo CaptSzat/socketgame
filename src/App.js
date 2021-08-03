@@ -61,6 +61,7 @@ function App() {
     <div className="App">
       <EntryForm/>
       <header className="App-header">
+        <h1>TEST</h1>
         <p>Connected: { '' + isConnected }</p>
         <p>Users Online: {userCount} </p>
         {/* <div className="Messages">{Messages}</div> */}
