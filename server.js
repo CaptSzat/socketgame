@@ -1,21 +1,21 @@
- const express = require('express');
-const { url } = require('inspector');
- const app = express()
- const server = require('http').Server(app)
+//  const express = require('express');
+// const { url } = require('inspector');
+//  const app = express()
+//  const server = require('http').Server(app)
 
- const io = require('socket.io')(server);
+//  const io = require('socket.io')(server);
 
 
-// const io = require('socket.io')({
-//   cors: {
-//     origin: ['http://localhost:3000']
-//   }
-// });
+const io = require('socket.io')({
+  cors: {
+    origin: ['http://localhost:3000']
+  }
+});
 
 let message = [''];
 let userCount = 0;
 
-app.use(express.static(__dirname + '/../../build'))
+// app.use(express.static(__dirname + '/../../build'))
 io.on('connection', socket => {
   let addedUser = false;
   //When a user connects
@@ -71,6 +71,6 @@ io.on('connection', socket => {
 });
 
 //Listens for the front end
-server.listen(3001);
+// server.listen(3001);
 
-// io.listen(3001);
+io.listen(3001);
