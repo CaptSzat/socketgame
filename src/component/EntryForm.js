@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import App, {socket} from '../App';
+import React, { useState } from 'react';
+import {socket} from '../App';
 import '../App.css';
 
 
